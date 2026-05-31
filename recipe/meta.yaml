@@ -1,5 +1,5 @@
 {% set name = "libreyolo" %}
-{% set version = "1.1.1" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a25bb2643e7001ffe1ed5de2e51c3d2f78ade547ade225ac707035a674013bdc
+  sha256: 375a9b055ba8c161355dee0442b9281e27474667a7fc9ba306d6fc96cfc42de7
 
 build:
   number: 0
