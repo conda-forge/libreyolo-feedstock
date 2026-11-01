@@ -1,5 +1,5 @@
 {% set name = "libreyolo" %}
-{% set version = "1.6.0" %}
+{% set version = "1.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2943ab7083894a64f058cce36f7691018fa969339256a9679e9d598e85d31263
+  sha256: 80cb4d3e5c79b8c8600378b635d24d41f7c0c7d4e9765d0ecfd2bef3e1b92039
 
 build:
   number: 0
@@ -25,15 +25,20 @@ requirements:
   run:
     - python >={{ python_min }}
     - numpy >=1.19.0
-    - pillow >=8.0.0
-    - pytorch >=1.13.0
-    - torchvision >=0.11.0
+    - pillow >=9.1.0
+    - pytorch >=2.4.0
+    - torchvision >=0.19.0
     - pyyaml >=6.0
     - requests >=2.25.0
     - opencv >=4.11.0
+    - python-mss >=9.0.1
     - tqdm >=4.65.0
     - pycocotools >=2.0.0
     - typer >=0.9.0
+    - click >=8.0.0
+    - safetensors >=0.4.0
+    - scipy >=1.7.0
+    - cloudpickle >=3.0.0
 
 test:
   imports:
@@ -55,7 +60,10 @@ about:
     TensorRT, OpenVINO, and NCNN are supported as experimental backends.
   license: MIT
   license_family: MIT
-  license_file: LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
+    - THIRD_PARTY_NOTICES.txt
   doc_url: https://www.libreyolo.com/docs
   dev_url: https://github.com/LibreYOLO/libreyolo
 
