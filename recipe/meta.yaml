@@ -1,5 +1,5 @@
 {% set name = "libreyolo" %}
-{% set version = "1.7.3" %}
+{% set version = "1.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 053e0161be15cafaefe4d3f057e5527f20d3acf89da70a207ec10b0efd26d9e8
+  sha256: 6387df40d5132a62e7d202f052971e61f253161f022533e9ce8819dca1f176c7
 
 build:
   number: 0
